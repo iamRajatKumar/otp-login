@@ -5,7 +5,7 @@ function App() {
  
   return (
     <div className='container'>
-      <h1>Login with Phone</h1>
+      <h1>Login with Number</h1>
       <PhoneOtpForm/>
     </div>
   )

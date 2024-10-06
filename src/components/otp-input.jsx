@@ -51,11 +51,22 @@ const OtpInput = ({ length = 4, onOtpSubmit = () => { } }) => {
       inputRefs.current[index - 1].focus();
     }
    }
+
+  // const handleLogin =(inputRefs) =>{
+  //   if(inputRefs === null){
+  //     console.log("bye");
+  //   }else{
+  //     console.log("hi");
+      
+  //   }
+  // }
+   
   return (
     <div>
       {
         otp.map((value, index) => {
           return (
+            
             <input
               key={index}
               type="text"
@@ -66,10 +77,19 @@ const OtpInput = ({ length = 4, onOtpSubmit = () => { } }) => {
               onKeyDown={(e) => handleKeyDown(index, e)}
               className="otpinput"
             />
+
+            
+            
           );
         })
       }
+      <br/>
+      <button  className="btn-otp" onClick={()=>{
+       alert('Login Sucessfull!')
+        
+      }} type="submit">Proceed</button>
     </div>
+    
   )
 };
 
